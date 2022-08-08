@@ -10,9 +10,9 @@ function App() {
       <Header/>
 
       {/* App Body */}
-      {/* Side Bar */}
-      {/* Feed */}
-      {/* Widgets */}
+        {/* Side Bar */}
+        {/* Feed */}
+        {/* Widgets */}
     </div>
   );
 }
