@@ -7,7 +7,7 @@ function Sidebar() {
     return (
         <div className="sidebar">
             <div className="sidebar__top">
-                <img src="" alt=""/>
+                <img src="https://static7.depositphotos.com/1222912/788/i/450/depositphotos_7887354-stock-photo-stars-background-01.jpg" alt=""/>
                 <Avatar className="sidebar__avatar"/>
                 <h2>Cyril Jephery</h2>
                 <h4>cyriljeph@gmail.com</h4>
