@@ -11,7 +11,7 @@ function App() {
       {/* Header */}
       <Header/>
 
-      <div className='app__body'>
+      <div className="app__body">
         <Sidebar />
         <Feed />
         {/* Widgets */}
