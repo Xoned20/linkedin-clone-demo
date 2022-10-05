@@ -13,7 +13,7 @@ function Header() {
         <div className="header">
             <div className="header__left">
                 <img  
-                    src="https://cdn-icons.flaticon.com/png/512/3536/premium/3536505.png?token=exp=1659951558~hmac=d679e515ec97db13db9bd763636abc1d" 
+                    src="https://w7.pngwing.com/pngs/511/605/png-transparent-in-logo-linkedin-diduco-ab-icon-linkedin-blue-angle-text-thumbnail.png" 
                     alt=""
                 />
 
