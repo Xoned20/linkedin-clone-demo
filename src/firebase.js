@@ -1,6 +1,8 @@
-import firebase from "firebase"
-
-const firebaseConfig = {
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
+  
+  const firebaseConfig = {
     apiKey: "AIzaSyCuZcDmL7SgQQhVnGrZt5vLL3m3k3cP9MM",
     authDomain: "linkedin-clone-demo-32c1c.firebaseapp.com",
     projectId: "linkedin-clone-demo-32c1c",
@@ -12,5 +14,5 @@ const firebaseConfig = {
   const firebaseApp = firebase.initializeApp(firebaseConfig);
   const db = firebaseApp.firestore();
   const auth = firebase.auth();
-
-  export { db, auth };
+  
+  export { auth, db };
