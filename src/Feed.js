@@ -9,7 +9,7 @@ import EventNoteIcon from '@material-ui/icons/EventNote';
 import CalendarViewDayIcon from '@material-ui/icons/CalendarViewDay';
 import Post from "./Post";
 import { db } from "./firebase";
-import firebase from "firebase/compat";
+import firebase from 'firebase/compat/app';
 
 function Feed() {
     const [input, setInput] = useState("");
@@ -29,13 +29,13 @@ function Feed() {
     const sendPost = e => {
         e.preventDefault();
 
-        db.collection("posts").add[{
-            name: 'Cyril Jephery',
-            description: 'this is a test',
+        db.collection("posts").add({
+            name: "Cyril Jephery",
+            description: "this is a test",
             message: input,
-            photoUrl: '',
-            timestamp:
-        }]
+            photoUrl: "",
+            timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+        })
     };
 
 
@@ -58,14 +58,16 @@ function Feed() {
             </div>
 
             {/* Posts */}
-            {posts.map((post) => (
-                <Post />
+            {posts.map(({ id, data: {name, description, message,
+            photoUrl }}) => (
+                <Post 
+                key={id}
+                name={name}
+                description={description}
+                message={message}
+                photoUrl={photoUrl}
+                />
             ))}
-            <Post 
-            name="Cyril Jephery"
-            description="This is a test"
-            messages="WOW this worked"
-            />   
         </div>
     )
 }
