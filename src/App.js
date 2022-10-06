@@ -7,8 +7,6 @@ import Feed from './Feed';
 function App() {
   return (
     <div className="app">
-
-      {/* Header */}
       <Header/>
 
       <div className="app__body">

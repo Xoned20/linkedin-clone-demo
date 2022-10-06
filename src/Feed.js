@@ -11,6 +11,7 @@ import Post from "./Post";
 import { db } from "./firebase";
 import firebase from 'firebase/compat/app';
 
+
 function Feed() {
     const [input, setInput] = useState("");
     const [posts, setPosts] = useState([]);
