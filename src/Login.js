@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import login from "./features/userSlice"
 import { auth } from './firebase';
 import "./Login.css"
 
@@ -27,16 +28,16 @@ function Login() {
             })
             .then(() => {
                 dispatch(
-                    Login({
+                    login({
                         email: userAuth.user.email,
                         uid: userAuth.user.uid,
                         displayName: name,
                         photoURL: profilePic,
                     })
                 );
-            })
-            .catch((error) => alert(error.message));
-        });
+            });
+        })
+        .catch((error) => alert(error));
     };
 
     return (
