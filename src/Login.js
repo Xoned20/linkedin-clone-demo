@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import login from "./features/userSlice"
+import { login } from "./features/userSlice"
 import { auth } from './firebase';
 import "./Login.css"
 
@@ -20,7 +20,8 @@ function Login() {
             return alert("Please enter a full name");
         }
 
-        auth.createUserWithEmailAndPassword(email, password)
+        auth
+        .createUserWithEmailAndPassword(email, password)
         .then((userAuth) => {
             userAuth.user.updateProfile({
                 displayName: name,
@@ -80,7 +81,7 @@ function Login() {
             </form>
 
             <p>Not a Member?
-                <span className='login__register' onClick={register}>Register Now</span>
+                <span className='login__register' onClick={register}> Register Now</span>
             </p>
         </div>
     )

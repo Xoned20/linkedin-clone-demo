@@ -14,9 +14,10 @@ function App() {
     <div className="app">
       <Header/>
 
-      {!user ? (<Login />
+      {!user ? (
+        <Login />
       ) : (
-         <div className="app__body">
+        <div className="app__body">
          <Sidebar />
          <Feed />
          {/* Widgets */}
